@@ -14,7 +14,7 @@ body {
 }
 
 .full-name {
-    background-color: darkolivegreen;
+    background-color: #0056A3;
     font-weight: 700;
     text-transform: capitalize;
     color: #fff;
@@ -26,7 +26,7 @@ body {
 .wrapper {
     display: flex;
     justify-content: space-around;
-    background-color: darkolivegreen;
+    background-color: #0056A3;
     box-shadow: 0 5px 5px 3px #222a33;
     margin: 0 auto;
     max-width: 1140px;
@@ -97,7 +97,7 @@ h6 {
 
 .title-contact {
     border-bottom: 2px solid #525659;
-    color: darkolivegreen;
+    color: #0056A3;
     display: block;
     font-size: 1.3em;
     font-weight: 700;
@@ -111,7 +111,7 @@ h6 {
 .ion-gear-b,
 .ion-university {
     border-bottom: 2px solid #525659;
-    color: darkolivegreen;
+    color: #0056A3;
     display: block;
     font-size: 1.3em;
     font-weight: 700;
@@ -147,8 +147,8 @@ li a {
     width: 100%;
 }
 
-a:hover {
-    color: blue;
+.social:hover {
+    color: #0056A3;
     transition: color 0.5s;
 }
 
@@ -157,12 +157,6 @@ li {
     width: 100%;
     display: inline-block;
 }
-
-li:hover {
-    color: deepskyblue;
-    transition: color 0.5s;
-}
-
 
 @keyframes slidein {
     from {
@@ -213,7 +207,7 @@ p {
 }
 
 .active {
-    background: darkolivegreen;
+    background: #0056A3;
     border: 1px solid #222a33;
     border-radius: 50%;
     display: inline-block;
@@ -230,8 +224,6 @@ p {
 }
 
 .circle {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     display: flex;
     display: inline-block;
     flex-direction: column;
@@ -261,7 +253,8 @@ p {
 }
 
 .skill:hover {
-    background: darkolivegreen;
+    color: #FFBC00;
+    background: #0056A3;
 }
 
 .skills {
@@ -272,7 +265,8 @@ p {
 }
 
 .skills:hover {
-    background: darkolivegreen;
+    background: #0056A3;
+    color: #FFBC00;
 }
 
 .universe {
@@ -302,7 +296,7 @@ p {
 .ion-eye,
 .ion-ios-information-outline {
     border-bottom: 2px solid #525659;
-    color: darkolivegreen;
+    color: #0056A3;
     display: block;
     font-size: 1.3em;
     font-weight: 700;
@@ -314,6 +308,25 @@ p {
 .jobs,
 .works-about {
     color: #000;
+}
+
+.jobs-stack {
+    font-weight: bold;
+}
+
+.jobs-stack:hover {
+    color: #0056A3;
+    text-decoration: underline;
+}
+
+.jobs-about {
+    margin: 5px 0 15px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+    position: static;
+    display: block;
+    text-align: left;
 }
 
 .footer {
@@ -331,10 +344,8 @@ p {
     text-align: center;
 }
 
-@media (max-width <=850px) {
+@media (max-width: 850px) {
     .wrapper {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: reverse;
         flex-direction: column-reverse;
     }
 
@@ -344,17 +355,42 @@ p {
         margin-top: 25px;
     }
 
+    img:hover {
+        margin-top: 40px;
+        margin-left: 100px;
+    }
+
+    p {
+        display: flex;
+        align-items: end;
+        font-size: 16px;
+    }
+
     ul {
         display: flex;
         flex-direction: column;
     }
 
-    .skill {
+    .skill,
+    .skills {
         width: 100%;
     }
 
-    .skills {
+    .block-languages {
         width: 100%;
+        margin-top: 10px;
+    }
+
+    .jobs {
+        width: 100%;
+    }
+
+    .jobs-about {
+        width: 100%;
+        margin: 8px 0 16px 0;
+        display: block;
+        line-height: 1.5;
+        text-align: left;
     }
 
     .text-wrapper {
@@ -362,17 +398,10 @@ p {
         width: 100%;
         text-align: center;
     }
-
-    p {
-        position: absolute;
-        margin-top: 222px;
-    }
 }
 
-@media (max-width <=650px) {
+@media (max-width: 650px) {
     .content-wrapper {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: reverse;
         flex-direction: column;
     }
 
@@ -400,31 +429,39 @@ p {
         flex-direction: column;
     }
 
-    .skill {
-        width: 100%;
-    }
-
+    .skill,
     .skills {
         width: 100%;
     }
 
-    p {
-        margin-right: 27px;
-    }
-
     .download-cv {
         margin-top: 20px;
+        margin-left: 20px;
     }
 
     img {
-        padding-top: 13px;
+        padding-top: 20px;
+    }
+
+    .jobs-about {
+        font-size: 15px;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    p {
+        display: flex;
+        align-items: end;
+        font-size: 11px;
+    }
+
+    .ion-eye {
+        margin-top: 25px;
     }
 }
 
-@media (max-width <=400px) {
+@media (max-width: 400px) {
     .content-wrapper {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: reverse;
         flex-direction: column;
     }
 
@@ -434,7 +471,12 @@ p {
 
     .block-languages {
         width: 100%;
-        margin-top: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .ion-eye {
+        margin-top: 20px;
     }
 
     .block-qualities {
@@ -452,34 +494,43 @@ p {
         flex-direction: column;
     }
 
-    .skill {
-        width: 100%;
-    }
-
+    .skill,
     .skills {
         width: 100%;
     }
 
-    p {
-        position: absolute;
-        margin-top: 222px;
-    }
-
     .download-cv {
         margin-top: 20px;
-        position: absolute;
-        left: 35%;
+        position: relative;
+        left: 0;
+        transform: translateX(0);
     }
 
     img {
-        padding-top: 13px;
+        padding-top: 20px;
+    }
+
+    .logo img {
+        display: flex;
+        justify-content: center;
+    }
+
+    p {
+        display: flex;
+        align-items: end;
+        font-size: 6px;
     }
 
     a.download-cv {
-        left: 50%;
-        top: 3%;
+        left: 53%;
+        top: 2%;
     }
 
+    .jobs-about {
+        font-size: 14px;
+        line-height: 1.4;
+        text-align: center;
+    }
 }
 
 .download-cv {
@@ -497,4 +548,12 @@ p {
     border-radius: 5px;
     white-space: nowrap;
     background: #FFBC00;
+}
+
+.download-cv:hover {
+    color: #0056A3;
+}
+
+.year:hover {
+    color: #0056A3;
 }
